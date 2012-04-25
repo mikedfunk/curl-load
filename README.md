@@ -14,7 +14,9 @@ Setup
 
 
     <?php // DON'T put the usual !defined(BASEPATH) part up here
+
     // usual config file stuff with this at the end:
+
     if (!defined(BASEPATH)) echo json_encode($config);
 
 
