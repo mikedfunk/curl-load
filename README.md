@@ -29,7 +29,7 @@ Load Spark (or autoload it)
 
     $this->load->spark('curl_load/x.x.x');
 
-It will autoload the resources you specify in ***config/curl_load.php***. You can also load resources manually like this:
+It will autoload the config files you specify in ***config/curl_load.php***. You can also load resources manually like this:
 
     $this->curl_load->load_config('http://examplesite/path/to/config.php', 'optional_http_auth_username', 'optional_http_auth_password');
 
