@@ -12,9 +12,11 @@ Setup
 2. Edit **config/curl_load.php** with the addresses of JSON config files you want to load
 3. I recommend just storing your remote config files as normal CodeIgniter config files, but use this code:
 
+
     <?php // DON'T put the usual !defined(BASEPATH) part up here
     // usual config file stuff with this at the end:
     if (!defined(BASEPATH)) echo json_encode($config);
+
 
 4. If you have sensitive config files you can protect them via http authentication and pass the username/password in with this library when fetching. An example of this is below.
 
