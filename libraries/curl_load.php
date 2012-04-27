@@ -42,11 +42,8 @@ class curl_load
 	{
 		$this->_ci =& get_instance();
 
-		// autoload configured urls
-		foreach($config['curl_autoload'] as $item)
-		{
-			$this->load_config($item);
-		}
+		// autoload JSON specified in the curl_load config file
+		$this->load_config($config['curl_autoload']);
 	}
 
 	// --------------------------------------------------------------------------
@@ -104,15 +101,16 @@ class curl_load
 	private function _curl_get_contents($url, $username = '', $password = '')
 	{
 		// load curl spark
-		$this->load->spark('curl/1.2.1');
-		$this->load->library('curl');
+		$this->_ci->load->spark('curl/1.2.1');
+		$this->_ci->load->library('curl');
 
 		// curl request
+		$this->_ci->curl->create($url);
 		if ($username != '' && $password != '')
 		{
-			$this->curl->http_login('username', 'password');
+			$this->_ci->curl->http_login('username', 'password');
 		}
-		return $this->curl->execute();
+		return $this->_ci->curl->execute();
 	}
 
 	// --------------------------------------------------------------------------
