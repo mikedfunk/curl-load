@@ -10,7 +10,7 @@
  * @email		mike@mikefunk.com
  *
  * @file		autoload.php
- * @version		1.0.0
+ * @version		1.0.1
  * @date		04/25/2012
  */
 

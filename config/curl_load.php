@@ -11,7 +11,7 @@
  * @email		mike@mikefunk.com
  *
  * @file		curl_load.php
- * @version		1.0.0
+ * @version		1.0.1
  * @date		04/25/2012
  */
 
@@ -20,17 +20,15 @@
 /**
  * loads an array of URLs which each evaluate to JSON.
  */
-$config['curl_autoload'] = array(
-
-	// sample array:
-	//
-	// array('url' => 'http://test.com/path/to/config.php'),
-	// array(
-	// 	'url' => 'http://test2.com/path/to/config.php',
-	// 	'username' => 'test_user',
-	// 	'password' => 'test_pass'
-	// );
-);
+// example config:
+// $config['curl_autoload'] = array(
+// 	array('url' => 'http://test.com/path/to/config.php'),
+// 	array(
+// 	// 	'url' => 'http://test2.com/path/to/config.php',
+// 		'username' => 'test_user',
+// 		'password' => 'test_pass'
+// 	)
+// );
 
 // --------------------------------------------------------------------------
 
